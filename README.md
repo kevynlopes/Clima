@@ -4,8 +4,6 @@ Aplicativo de Clima: Desenvolva um aplicativo que mostre as condições climáti
 
 DOC API: https://openweathermap.org/current
 
-API KEY: 8922ca389fd95c0ffe26ee8d97751108
-
 KEY SITE : https://home.openweathermap.org/api_keys
 
 ## Recommended IDE Setup
