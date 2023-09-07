@@ -1,24 +1,26 @@
 <template>
   <div class="flex flex-col gap-12">
-    <div
-      class="flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl drop-shadow-lg w-96 h-28"
-    >
-      <div class="flex items-center justify-between gap-4">
-        <div class="flex gap-4">
-          <img src="../assets/lock.png" width="25" alt="lock" />
-          <input
-            @keypress.enter="puxarApi"
-            v-model="dados"
-            class="text-lg"
-            type="text"
-            placeholder="Adicione sua Localização"
-          />
+    <transition appear>
+      <div
+        class="flex justify-center items-center bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl drop-shadow-lg w-96 h-28"
+      >
+        <div class="flex items-center justify-between gap-4">
+          <div class="flex gap-4">
+            <img src="../assets/lock.png" width="25" alt="lock" />
+            <input
+              @keypress.enter="puxarApi"
+              v-model="dados"
+              class="text-lg"
+              type="text"
+              placeholder="Adicione sua Localização."
+            />
+          </div>
+          <button @click="puxarApi">
+            <img src="../assets/search.png" width="20" alt="search" />
+          </button>
         </div>
-        <button @click="puxarApi">
-          <img src="../assets/search.png" width="20" alt="search" />
-        </button>
       </div>
-    </div>
+    </transition>
     <transition>
       <div
         v-if="dado.name"
